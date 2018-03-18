@@ -43,21 +43,6 @@ public class General : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(asteroid_big.transform.position.y > 5.0f )
-        {
-            rb.MovePosition(transform.TransformVector(asteroid_big.transform.position.x, -4.90f, 0));
-        }
-        if (asteroid_big.transform.position.y < -5.0f)
-        {
-            rb.MovePosition(transform.TransformVector(asteroid_big.transform.position.x, 4.9f, 0));
-        }
-        if (asteroid_big.transform.position.x > 11.5f)
-        {
-            rb.MovePosition(transform.TransformVector(-11.2f,asteroid_big.transform.position.y, 0));
-        }
-        if (asteroid_big.transform.position.x < -11.5f)
-        {
-            rb.MovePosition(transform.TransformVector(11.2f, asteroid_big.transform.position.y, 0));
-        }
+
     }
 }

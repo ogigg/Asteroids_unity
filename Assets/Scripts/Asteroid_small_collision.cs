@@ -20,6 +20,6 @@ public class Asteroid_small_collision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+    
     }
 }

@@ -30,6 +30,7 @@ public class ShipMovement : MonoBehaviour
         }
         if (Input.GetKey("w"))
         {
+            if (rb.transform.forward.y < 1 ) 
             rb.AddForce(transform.TransformVector(0, 10, 0));
             //rb.MovePosition(transform.position + transform.TransformVector(0, (float)0.03, 0));
         }
@@ -42,7 +43,7 @@ public class ShipMovement : MonoBehaviour
                 Rigidbody2D Temporary_RigidBody;
                 Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D>();
                 Temporary_RigidBody.AddForce(transform.forward + transform.TransformVector(0, 300, 0));
-                Destroy(Temporary_Bullet_Handler, 8.0f);
+                Destroy(Temporary_Bullet_Handler, 7.0f);
                 n = 0;
                     }
             n++;

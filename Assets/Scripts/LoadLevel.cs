@@ -15,7 +15,7 @@ public class LoadLevel : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {	
-        for (int i=0;i<8;i++)
+        for (int i=0;i<12;i++)
         {
             Generate_Big_Asteroid(i);
         }

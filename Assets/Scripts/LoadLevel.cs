@@ -19,10 +19,12 @@ public class LoadLevel : MonoBehaviour {
         {
             Generate_Big_Asteroid(i);
         }
+        Debug.Log(asteroid_big.tag.ToString());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+    }
 }

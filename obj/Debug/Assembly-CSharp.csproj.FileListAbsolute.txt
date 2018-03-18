@@ -68,3 +68,4 @@ C:\Users\Gerwazy\Documents\hello world\obj\Debug\Assembly-CSharp.dll
 C:\Users\Gerwazy\Documents\hello world\obj\Debug\Assembly-CSharp.pdb
 C:\Users\Gerwazy\Documents\hello world\Temp\bin\Debug\TextMeshPro-2017.3-1.0.56-Editor.dll
 C:\Users\Gerwazy\Documents\hello world\Temp\bin\Debug\TextMeshPro-2017.3-1.0.56-Runtime.dll
+C:\Users\Gerwazy\Documents\hello world\Temp\bin\Debug\UnityEditor.Android.Extensions.dll

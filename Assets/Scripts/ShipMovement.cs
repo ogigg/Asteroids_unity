@@ -30,7 +30,8 @@ public class ShipMovement : MonoBehaviour
         }
         if (Input.GetKey("w"))
         {
-            rb.MovePosition(transform.position + transform.TransformVector(0, (float)0.03, 0));
+            rb.AddForce(transform.TransformVector(0, 10, 0));
+            //rb.MovePosition(transform.position + transform.TransformVector(0, (float)0.03, 0));
         }
         if (Input.GetKey("space"))
         {

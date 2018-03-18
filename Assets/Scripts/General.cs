@@ -9,13 +9,13 @@ public class General : MonoBehaviour {
     public GameObject Bullet;
     public Rigidbody2D rb;
     
-    void Generate_Small_Asteroid(float posx, float posy)
+    void Generate_Small_Asteroid(float posx, float posy, float velx, float vely)
     {
         System.Random rnd = new System.Random(asteroid_big.GetInstanceID());
         asteroid_small = Instantiate(asteroid_small, asteroid_big.transform.position + transform.TransformVector(posx, posy, 0), asteroid_big.transform.rotation) as GameObject;
         Rigidbody2D Temporary_RigidBody;
         Temporary_RigidBody = asteroid_small.GetComponent<Rigidbody2D>();
-        Vector2 v2v = new Vector2((rnd.Next(-10, 10) / 10), (rnd.Next(-10, 10) / 10));
+        Vector2 v2v = new Vector2(velx, vely);
         Temporary_RigidBody.velocity =rb.velocity + v2v;
     }
     void OnCollisionEnter2D(Collision2D coll)
@@ -23,10 +23,10 @@ public class General : MonoBehaviour {
         if (coll.gameObject.tag == "Bullet")
         {
             Destroy(coll.gameObject);
-            Generate_Small_Asteroid(-0.2f, -0.2f);
-            Generate_Small_Asteroid(0.2f, -0.2f);
-            Generate_Small_Asteroid(-0.2f, 0.2f);
-            Generate_Small_Asteroid(0.2f, 0.2f);
+            Generate_Small_Asteroid(-0.2f, -0.2f,-1,1);
+            Generate_Small_Asteroid(0.2f, -0.2f,1,-1);
+            Generate_Small_Asteroid(-0.2f, 0.2f,-1,1);
+            Generate_Small_Asteroid(0.2f, 0.2f,1,1);
             Destroy(asteroid_big);
         }
         else

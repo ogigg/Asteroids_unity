@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\JoystickControl.cs" />
      <Compile Include="Assets\Scripts\Asteroid_small_collision.cs" />
      <Compile Include="Assets\Scripts\General.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />

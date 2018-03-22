@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ufo: {fileID: 1980077007204772}
-  ShipMov: {fileID: 0}
+  ship: {fileID: 1316497698288434, guid: eaa01865e4b495e4fbe00c784e06f504, type: 2}
+  Bullet: {fileID: 1234664131676786, guid: f541b295103cf8f4fac43b6c967884e9, type: 2}
 --- !u!212 &212611846346026158
 SpriteRenderer:
   m_ObjectHideFlags: 1

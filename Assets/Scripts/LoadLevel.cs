@@ -5,11 +5,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour {
+    public GameObject ship;
     public GameObject asteroid_big;
     public GameObject ufo;
     private bool UFO_generated;
     
-
+    public void SetUFOGeneratedFalse()
+    {
+        UFO_generated = false;
+    }
     void Generate_Big_Asteroid(int seed)
     {
         System.Random rnd = new System.Random(seed);
@@ -23,7 +27,8 @@ public class LoadLevel : MonoBehaviour {
         Instantiate(ufo, Position_vector3, Quaternion.identity);
     }
     // Use this for initialization
-    void Start () {	
+    void Start () {
+        Instantiate(ship, new Vector3(0,0,0), Quaternion.identity);
         for (int i=0;i<10;i++)
         {
             Generate_Big_Asteroid(i);
@@ -40,7 +45,7 @@ public class LoadLevel : MonoBehaviour {
             SceneManager.LoadScene(2); //WinScene
 
         }
-        if (GameObject.FindGameObjectsWithTag("Asteroid_big").Length == 10 && UFO_generated == false) //Checking if there is 5 asteroid left !WORKING!
+        if (GameObject.FindGameObjectsWithTag("Asteroid_big").Length == 5 && UFO_generated == false) //Checking if there is 5 asteroid left and then generating ufo
         {
             Generate_UFO();
             UFO_generated = true;

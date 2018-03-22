@@ -33,7 +33,7 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.MoveRotation(joystick.JoystickAngle()*-1);
+        //rb.MoveRotation(joystick.JoystickAngle()*-1);
 
         if (Input.GetKey("a"))
         {
@@ -45,11 +45,16 @@ public class ShipMovement : MonoBehaviour
         }
         if (Input.GetKey("w"))
         {
-            ShipPush();
+            if (n > 10)
+            {
+                ShipPush();
+                n = 0;
+            }
+            n++;
         }
         if (Input.GetKey("space"))
         {
-            if (n > 3) {
+            if (n > 7) {
                 Shoot();
                 n = 0;
                     }
